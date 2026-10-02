@@ -1,0 +1,4 @@
+# Keep all local runtime data private, even if the root ignore rules change.
+*
+!.gitignore
+!.gitkeep

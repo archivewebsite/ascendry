@@ -1,0 +1,17 @@
+.overlay { position: fixed; z-index: 80; inset: 0; background: color-mix(in srgb, var(--foreground) 24%, transparent); backdrop-filter: blur(2px); }
+.dialog { position: fixed; z-index: 81; top: 50%; left: 50%; width: min(440px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; overscroll-behavior: contain; transform: translate(-50%, -50%); border: 1px solid var(--border); border-radius: var(--radius); background: var(--card-strong); box-shadow: 0 18px 60px color-mix(in srgb, var(--foreground) 22%, transparent); }
+.header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 16px 17px 13px; border-bottom: 1px solid color-mix(in srgb, var(--border) 38%, transparent); }
+.title { margin: 0; font-size: .95rem; font-weight: 650; }
+.description { margin: 4px 0 0; color: var(--muted-foreground); font-size: .78rem; }
+.close, .guideButton { display: inline-grid; place-items: center; border: 1px solid var(--border); border-radius: 6px; background: var(--card); color: var(--foreground); font: 600 .76rem "IBM Plex Mono"; }
+.close { width: 28px; height: 28px; font-size: 1rem; }
+.guideButton { width: 30px; height: 30px; }
+.close:hover, .guideButton:hover { background: var(--muted); }
+.list { display: grid; padding: 8px 17px 14px; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 9px 0; border-bottom: 1px solid color-mix(in srgb, var(--border) 28%, transparent); font-size: .8rem; }
+.row:last-child { border-bottom: 0; }
+.row kbd { color: var(--foreground); font: 600 .7rem "IBM Plex Mono"; text-align: right; }
+.row span { color: var(--muted-foreground); text-align: right; }
+@media (prefers-reduced-motion: no-preference) { .overlay { animation: fade-in 120ms ease-out; } .dialog { animation: dialog-in 140ms ease-out; } }
+@keyframes fade-in { from { opacity: 0; } }
+@keyframes dialog-in { from { opacity: 0; transform: translate(-50%, calc(-50% + 6px)); } }

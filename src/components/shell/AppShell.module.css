@@ -1,0 +1,45 @@
+.shell { min-height: 100vh; display: grid; grid-template-columns: var(--sidebar-width) minmax(0, 1fr); }
+.shellCollapsed { --sidebar-width: 70px; }
+.sidebar { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; gap: 16px; padding: 14px 12px; background: color-mix(in srgb, var(--card) 74%, var(--background)); border-right: 1px solid color-mix(in srgb, var(--border) 45%, transparent); overflow: hidden; }
+.brand { height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 6px; flex: none; }
+.brandName { font-size: 1.05rem; font-weight: 700; letter-spacing: -.03em; }
+.brandMeta { display: block; color: var(--muted-foreground); font: 400 .64rem "IBM Plex Mono"; letter-spacing: .08em; text-transform: uppercase; }
+.nav { display: grid; gap: 15px; overflow-y: auto; min-height: 0; }
+.navGroup { display: grid; gap: 3px; }
+.navLabel { padding: 0 10px 4px; color: var(--muted-foreground); font-size: .66rem; font-weight: 550; }
+.navLink { min-height: 38px; display: flex; align-items: center; gap: 11px; padding: 8px 10px; border-radius: 7px; color: var(--muted-foreground); font-size: .85rem; font-weight: 550; white-space: nowrap; transition: background-color 140ms ease, color 140ms ease; }
+.navLink:hover { background: var(--muted); color: var(--foreground); }
+.navActive { background: color-mix(in srgb, var(--primary) 13%, var(--card)); color: var(--foreground); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 22%, transparent); }
+.navIcon { flex: none; width: 19px; height: 19px; }
+.sidebarFooter { margin-top: auto; display: grid; gap: 8px; }
+.collapse { width: 100%; }
+.collapse .collapseIcon { width: 16px; height: 16px; flex: none; }
+.collapseIconGroup { transform-box: fill-box; transform-origin: center; }
+.collapsed .brandCopy, .collapsed .navText, .collapsed .statusCopy, .collapsed .navLabel { display: none; }
+.workspace { min-width: 0; }
+.topbar { position: sticky; top: 0; z-index: 20; min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 22px; background: color-mix(in srgb, var(--background) 88%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid color-mix(in srgb, var(--border) 38%, transparent); }
+.status { display: flex; align-items: center; gap: 8px; color: var(--muted-foreground); font-size: .77rem; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--negative); }
+.dotConnected { background: var(--positive); }
+.topActions { display: flex; align-items: center; gap: 8px; }
+.content { width: min(1540px, 100%); margin: 0 auto; padding: 24px 28px 48px; }
+.pageHeader { display: flex; align-items: center; padding-bottom: 17px; border-bottom: 1px solid color-mix(in srgb, var(--border) 25%, transparent); justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+.pageIdentity { display: flex; align-items: center; gap: 15px; min-width: 0; }
+.pageIdentity > div:last-child { min-width: 0; }
+.motionToggle { flex: none; }
+.pageTitle { margin: 0; font-size: clamp(1.35rem, 2vw, 1.75rem); line-height: 1.15; letter-spacing: -.035em; }
+.pageDescription { margin: 6px 0 0; max-width: 740px; color: var(--muted-foreground); font-size: .86rem; }
+@media (max-width: 840px) { .shell { --sidebar-width: 70px; } .brandCopy, .navText, .statusCopy, .collapse, .navLabel { display: none; } .content { padding: 18px 16px 40px; } .topbar { padding-inline: 16px; } }
+@media (max-width: 560px) {
+  .shell { display: block; }
+  .sidebar { position: fixed; z-index: 30; inset: auto 0 0; flex-direction: row; border: 0; border-top: 1px solid var(--border); padding: 5px 5px calc(5px + env(safe-area-inset-bottom)); height: calc(60px + env(safe-area-inset-bottom)); overflow: hidden; }
+  .brand, .sidebarFooter, .navLabel { display: none; }
+  .navGroup { display: contents; }
+  .pageHeader { flex-wrap: wrap; gap: 14px; }
+  .pageIdentity { gap: 12px; }
+  .nav { display: flex; flex: 1 1 auto; gap: 3px; min-width: 0; margin: 0; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; padding-inline: max(0px, calc((100vw - 453px) / 2)); scroll-snap-type: x proximity; scrollbar-width: none; }
+  .nav::-webkit-scrollbar { display: none; }
+  .navLink { flex: 0 0 48px; width: 48px; min-height: 48px; justify-content: center; padding: 7px; scroll-snap-align: center; }
+  .workspace { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  .topbar { position: sticky; }
+}

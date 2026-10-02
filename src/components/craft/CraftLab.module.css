@@ -1,0 +1,53 @@
+.workbench { display: grid; grid-template-columns: minmax(310px, 390px) minmax(0, 1fr); gap: 16px; align-items: start; }
+.formGrid { display: grid; gap: 12px; }
+.controlGroup { min-width: 0; display: grid; gap: 6px; margin: 0; padding: 0; border: 0; }
+.controlGroup legend { padding: 0; color: var(--muted-foreground); font-size: .76rem; font-weight: 600; }
+.segment { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 4px; border: 1px solid var(--border); border-radius: 8px; background: var(--muted); }
+.segment button { min-height: 32px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border: 0; border-radius: 5px; background: transparent; color: var(--muted-foreground); font-size: .75rem; font-weight: 600; }
+.segment button > svg { width: 14px; height: 14px; flex: none; }
+.segment .active { background: var(--card-strong); color: var(--foreground); box-shadow: 0 1px 2px color-mix(in srgb, var(--foreground) 12%, transparent); }
+.circuitPanel { min-height: 420px; max-width: 100%; overflow: auto; background-image: linear-gradient(color-mix(in srgb, var(--border) 10%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--border) 10%, transparent) 1px, transparent 1px); background-size: 22px 22px; }
+.circuit { display: inline-flex; min-width: 100%; padding: 22px 30px 30px; }
+.circuit ul { position: relative; display: flex; gap: 26px; margin: 0; padding: 45px 0 0; list-style: none; }
+.circuit li { position: relative; display: flex; flex-direction: column; align-items: center; padding: 0 9px; }
+.circuit li::before, .circuit li::after { content: ""; position: absolute; top: 21px; width: 50%; height: 24px; border-top: 2px solid var(--border); }
+.circuit li::before { right: 50%; }
+.circuit li::after { left: 50%; }
+.circuit li:first-child::before, .circuit li:last-child::after { border: 0; }
+.circuit li:only-child::before, .circuit li:only-child::after { display: none; }
+.circuit ul ul::before { content: ""; position: absolute; top: 0; left: 50%; height: 45px; border-left: 2px solid var(--border); }
+.node { position: relative; z-index: 1; width: 176px; min-height: 74px; display: grid; align-content: center; gap: 4px; padding: 10px 12px; border: 2px solid var(--border); border-radius: 8px; background: var(--card-strong); box-shadow: 3px 3px 0 color-mix(in srgb, var(--border) 30%, transparent); text-align: left; }
+.node::before { content: ""; position: absolute; left: 50%; top: -8px; width: 12px; height: 12px; transform: translateX(-50%); border: 2px solid var(--border); border-radius: 50%; background: var(--background); }
+.craft { border-color: var(--primary); }
+.buy { border-color: var(--positive); }
+.mix { border-color: var(--chart-2); box-shadow: 3px 3px 0 color-mix(in srgb, var(--chart-2) 22%, transparent); }
+.raw { border-style: dashed; border-color: var(--warning); }
+.nodeTop { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.nodeName { overflow: hidden; text-overflow: ellipsis; font-size: .78rem; font-weight: 650; white-space: nowrap; }
+.nodeQuantity { color: var(--muted-foreground); font: .7rem "IBM Plex Mono"; overflow-wrap: anywhere; }
+.nodeMissing { color: var(--negative); font: 600 .68rem "IBM Plex Mono"; overflow-wrap: anywhere; }
+.nodeAction { font: 600 .62rem "IBM Plex Mono"; letter-spacing: .06em; text-transform: uppercase; }
+.results { min-width: 0; display: grid; gap: 16px; }
+.results > * { min-width: 0; }
+.numberHint { margin: 0 0 12px; color: var(--muted-foreground); font-size: .72rem; line-height: 1.5; }
+.budgetSummary { display: grid; gap: 10px; padding: 14px 16px; border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 9px; background: var(--card-strong); }
+.budgetHeading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.budgetHeading span { color: var(--muted-foreground); font: 600 .68rem "IBM Plex Mono"; letter-spacing: .08em; text-transform: uppercase; }
+.budgetHeading strong { font-size: .78rem; font-weight: 600; }
+.budgetMetrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.recommendation { display: grid; grid-template-columns: minmax(190px, .7fr) minmax(0, 1.3fr); gap: 14px; align-items: center; padding: 14px 16px; border: 1px solid var(--border); border-left: 4px solid var(--positive); border-radius: 9px; background: var(--card-strong); box-shadow: 0 1px 2px color-mix(in srgb, var(--foreground) 7%, transparent); }
+.recommendationLabel { display: block; color: var(--muted-foreground); font: 600 .68rem "IBM Plex Mono"; letter-spacing: .08em; text-transform: uppercase; }
+.recommendation > div > strong { display: block; margin-top: 2px; font-size: 1.35rem; line-height: 1.2; }
+.recommendation p { margin: 3px 0 0; color: var(--muted-foreground); font-size: .78rem; }
+.recommendationMetrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
+.summaryCell { padding: 11px; border: 1px solid color-mix(in srgb, var(--border) 40%, transparent); border-radius: 7px; background: var(--muted); }
+.summaryCell > span { display: block; color: var(--muted-foreground); font-size: .67rem; text-transform: uppercase; letter-spacing: .04em; }
+.summaryCell strong { display: block; margin-top: 4px; font: 600 .88rem "IBM Plex Mono"; overflow-wrap: anywhere; }
+.saveBar { display: flex; gap: 8px; align-items: end; }
+.saveBar label { flex: 1; min-width: 0; }
+.overrideRow { display: grid; grid-template-columns: 1fr 145px; gap: 8px; align-items: end; }
+@media (max-width: 1120px) { .workbench { grid-template-columns: 1fr; } .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .recommendation { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .budgetHeading { align-items: flex-start; flex-direction: column; gap: 3px; } .budgetMetrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .summary, .recommendationMetrics, .budgetMetrics { grid-template-columns: 1fr; } .saveBar, .overrideRow { display: grid; grid-template-columns: 1fr; } }

@@ -1,0 +1,41 @@
+.grid { display: grid; gap: 14px; }
+.metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.metric { min-width: 0; padding: 15px 17px; }
+.metricLabel { color: var(--muted-foreground); font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .055em; }
+.metricValue { margin-top: 7px; font: 600 1.45rem "IBM Plex Mono"; letter-spacing: -.04em; overflow-wrap: anywhere; }
+.metricMeta { margin-top: 4px; color: var(--muted-foreground); font-size: .73rem; }
+.twoColumns { grid-template-columns: minmax(0, 1.55fr) minmax(280px, .75fr); align-items: start; }
+.threeColumns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: 9px; margin-bottom: 14px; }
+.toolbar > label { min-width: 145px; }
+.grow { flex: 1 1 260px; }
+.inline { display: flex; align-items: center; gap: 8px; }
+.inline > svg { width: 16px; height: 16px; flex: none; }
+.stack { display: grid; gap: 11px; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.itemIdentity { min-width: 0; display: block; }
+.itemName { display: block; overflow: hidden; text-overflow: ellipsis; font-weight: 600; white-space: nowrap; }
+.itemMeta { color: var(--muted-foreground); font: .7rem "IBM Plex Mono"; }
+.dividerRows > * + * { border-top: 1px solid color-mix(in srgb, var(--border) 32%, transparent); }
+.listRow { padding: 10px 0; }
+.filterCount { margin-left: auto; color: var(--muted-foreground); font: .75rem "IBM Plex Mono"; }
+.pager { display: flex; align-items: center; justify-content: flex-end; gap: 8px; padding: 12px 0 0; color: var(--muted-foreground); font-size: .78rem; }
+.sortButton { appearance: none; display: inline-flex; align-items: center; gap: 4px; border: 0; background: transparent; padding: 0; color: inherit; font: inherit; text-transform: inherit; letter-spacing: inherit; }
+.sortButton > svg { width: 12px; height: 12px; flex: none; }
+.tableIcon { width: 16px; height: 16px; display: block; }
+.alertStrip { display: flex; align-items: flex-start; gap: 9px; padding: 11px 13px; border: 1px solid var(--warning); border-radius: var(--radius); background: color-mix(in srgb, var(--warning) 8%, var(--card)); }
+.chart { width: 100%; height: 260px; }
+.sectionGap { margin-top: 16px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.numberExample { margin: 0; font: 600 1.2rem "IBM Plex Mono", monospace; overflow-wrap: anywhere; }
+.chipRow { display: flex; flex-wrap: wrap; gap: 6px; }
+.kpiLine { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), 1fr)); gap: 10px; }
+.kpi { min-width: 0; padding: 10px; background: var(--muted); border-radius: 7px; }
+.kpi > span { display: block; color: var(--muted-foreground); font-size: .68rem; }
+.kpi strong { display: block; margin-top: 3px; font: 600 .9rem "IBM Plex Mono"; overflow-wrap: anywhere; }
+.shortcutGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; }
+.shortcutRow { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid color-mix(in srgb, var(--border) 28%, transparent); font-size: .8rem; }
+.shortcutRow kbd { font: 600 .72rem "IBM Plex Mono"; }
+.shortcutRow span { color: var(--muted-foreground); }
+@media (max-width: 1080px) { .metrics, .threeColumns { grid-template-columns: repeat(2, minmax(0, 1fr)); } .twoColumns { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .metrics, .threeColumns, .shortcutGrid { grid-template-columns: 1fr; } .toolbar > label { width: 100%; } }

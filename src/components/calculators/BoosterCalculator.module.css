@@ -1,0 +1,48 @@
+.convention { margin: 0; color: var(--muted-foreground); font-size: .78rem; }
+.marketToolbar { display: flex; align-items: end; flex-wrap: wrap; gap: 10px; }
+.marketToolbar > label { min-width: 180px; }
+.marketStatus { align-self: center; color: var(--muted-foreground); font-size: .75rem; }
+.settingsLink { font-weight: 700; text-decoration: underline; }
+.card, .tableScroll { min-width: 0; }
+.tableScroll { max-width: 100%; overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+.table th, .table td { border-top: 1px solid color-mix(in srgb, var(--border) 32%, transparent); padding: 10px 12px; text-align: left; vertical-align: middle; }
+.table thead th { border-top: 0; background: var(--muted); color: var(--muted-foreground); font-size: .7rem; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.table tbody tr:hover { background: color-mix(in srgb, var(--primary) 5%, var(--card)); }
+.table td:nth-child(4) { width: 170px; }
+.table td input { min-width: 130px; }
+.tier { width: 90px; font: 650 .95rem "IBM Plex Mono"; }
+.itemLink { font-weight: 600; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--foreground) 28%, transparent); text-underline-offset: 3px; }
+.itemLink:hover { text-decoration-color: currentColor; }
+.itemMethod { display: block; margin-top: 3px; color: var(--muted-foreground); font-size: .68rem; }
+.mono, .quantity { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.quantity { font-size: 1rem; font-weight: 600; }
+.duration { min-width: 310px; line-height: 1.6; font-variant-numeric: tabular-nums; }
+.cost { min-width: 200px; }
+.costCell { display: grid; gap: 3px; }
+.costCell small { color: var(--muted-foreground); font-size: .68rem; line-height: 1.45; }
+.costValue { font: 600 .9rem "IBM Plex Mono"; white-space: nowrap; }
+.emptyCost { color: var(--muted-foreground); font-size: .75rem; }
+.summaryGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.summaryGrid .summary { margin-top: 0; }
+.summary { display: grid; gap: 5px; margin-top: 14px; padding: 14px; border-left: 3px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; background: var(--muted); }
+.summary span { color: var(--muted-foreground); font-size: .7rem; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; }
+.summary strong { font: 600 1rem/1.6 "IBM Plex Mono"; overflow-wrap: anywhere; }
+.summary small { color: var(--muted-foreground); font-size: .72rem; line-height: 1.4; }
+.targetGrid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.error { color: var(--negative); font-size: .75rem; }
+.empty { margin: 18px 0 2px; color: var(--muted-foreground); font-size: .8rem; }
+@media (max-width: 1000px) { .targetGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .summaryGrid { grid-template-columns: 1fr; } }
+@media (max-width: 620px) {
+  .marketToolbar > label { width: 100%; }
+  .targetGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .table, .table tbody { display: block; width: 100%; }
+  .table thead { display: none; }
+  .table tbody tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; border-top: 1px solid color-mix(in srgb, var(--border) 32%, transparent); padding: 12px 0; }
+  .table tbody tr:first-child { border-top: 0; }
+  .table th, .table td { display: block; width: auto !important; min-width: 0; border: 0; padding: 0; }
+  .table th { grid-column: 1 / -1; }
+  .table td input { min-width: 0; }
+  .table td[data-label]::before { content: attr(data-label); display: block; margin-bottom: 5px; color: var(--muted-foreground); font: 650 .66rem "IBM Plex Sans"; letter-spacing: .04em; text-transform: uppercase; }
+  .table .duration, .table .cost { grid-column: 1 / -1; }
+}

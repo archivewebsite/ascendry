@@ -1,0 +1,58 @@
+.formGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+.full { grid-column: 1 / -1; }
+.placeholder { min-height: 270px; display: grid; place-content: center; justify-items: center; color: var(--muted-foreground); text-align: center; }
+.placeholder svg { width: 34px; height: 34px; color: var(--primary); }
+.placeholder p { max-width: 320px; font-size: .8rem; }
+.resultLead h2 { margin: 10px 0 15px; font-size: 1.25rem; }
+.metricGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.metricGrid > div { border-radius: var(--radius); background: var(--muted); padding: 12px; }
+.metricGrid span { display: block; color: var(--muted-foreground); font-size: .68rem; }
+.metricGrid strong { display: block; margin-top: 4px; font: 650 .95rem "IBM Plex Mono"; }
+.runwayForm { display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(110px, .65fr)) auto; align-items: end; gap: 9px; margin-bottom: 12px; }
+.strategyGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; margin-top: 14px; }
+.strategyGrid article { border: 1px solid color-mix(in srgb, var(--border) 55%, transparent); border-radius: var(--radius); background: var(--muted); padding: 13px; }
+.strategyGrid article.bestStrategy { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 8%, var(--muted)); }
+.strategyTitle { display: flex; align-items: center; justify-content: space-between; gap: 9px; }
+.strategyTitle h3 { margin: 0; font-size: .83rem; }
+.strategyTitle svg { color: var(--primary); }
+.strategyGrid article > strong, .strategyGrid article > span { display: block; }
+.strategyGrid article > strong { margin-top: 10px; font: 650 .9rem "IBM Plex Mono"; }
+.strategyGrid article > span { margin-top: 3px; color: var(--muted-foreground); font: .68rem "IBM Plex Mono"; }
+.strategyGrid p { min-height: 34px; margin: 9px 0 4px; color: var(--muted-foreground); font-size: .7rem; }
+.strategyGrid small { color: var(--muted-foreground); font-size: .64rem; text-transform: uppercase; letter-spacing: .05em; }
+.decision { display: flex; gap: 10px; margin-top: 12px; border: 1px solid color-mix(in srgb, var(--positive) 55%, var(--border)); border-radius: var(--radius); background: color-mix(in srgb, var(--positive) 7%, var(--card)); padding: 12px; }
+.decision svg { width: 22px; height: 22px; flex: none; color: var(--positive); }
+.decision strong { font-size: .78rem; }
+.decision p { margin: 3px 0 0; color: var(--muted-foreground); font-size: .72rem; }
+.muted { color: var(--muted-foreground); font-size: .76rem; }
+.bossBanner > div { display: flex; align-items: center; justify-content: space-between; gap: 14px; background: linear-gradient(110deg, color-mix(in srgb, var(--primary) 11%, var(--card)), var(--card)); }
+.bossBanner span { color: var(--primary); font-size: .67rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
+.bossBanner h2 { margin: 3px 0; font-size: 1.05rem; text-transform: capitalize; }
+.bossBanner p { margin: 0; color: var(--muted-foreground); font: .73rem "IBM Plex Mono"; }
+.bossActions { display: flex; gap: 8px; flex-wrap: wrap; }
+.check { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 9px; border: 1px solid color-mix(in srgb, var(--border) 50%, transparent); border-radius: var(--radius); padding: 10px; }
+.check input { margin-top: 2px; accent-color: var(--primary); }
+.check strong, .check small { display: block; }
+.check strong { font-size: .75rem; }
+.check small { margin-top: 2px; color: var(--muted-foreground); font-size: .68rem; }
+.damageBreakdown { margin-top: 13px; }
+.damageBreakdown > div { padding: 9px 0; border-top: 1px solid color-mix(in srgb, var(--border) 35%, transparent); }
+.damageBreakdown span, .damageBreakdown strong, .damageBreakdown small { display: block; }
+.damageBreakdown span { color: var(--muted-foreground); font-size: .67rem; }
+.damageBreakdown strong { margin-top: 2px; font: 650 .85rem "IBM Plex Mono"; }
+.damageBreakdown small { margin-top: 2px; color: var(--muted-foreground); font-size: .66rem; }
+.tableScroll { overflow-x: auto; }
+.resultTable { width: 100%; min-width: 650px; border-collapse: collapse; font: .7rem "IBM Plex Mono"; font-variant-numeric: tabular-nums; }
+.resultTable th, .resultTable td { border-bottom: 1px solid color-mix(in srgb, var(--border) 32%, transparent); padding: 9px 6px; text-align: right; white-space: nowrap; }
+.resultTable th:first-child { text-align: left; }
+.resultTable thead th { color: var(--muted-foreground); font: 650 .65rem "IBM Plex Sans"; text-transform: uppercase; letter-spacing: .04em; }
+.resultTable tbody th { display: table-cell; font-weight: 650; }
+.resultTable tbody th svg { color: var(--primary); vertical-align: -2px; }
+.resultTable td small { display: block; margin-top: 3px; color: var(--muted-foreground); font-size: .65rem; }
+.resultTable .winner { background: color-mix(in srgb, var(--primary) 7%, transparent); }
+.weaponGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-bottom: 12px; }
+.weaponGrid article { display: flex; justify-content: space-between; gap: 10px; border-radius: var(--radius); background: var(--muted); padding: 9px 10px; font-size: .72rem; }
+.weaponGrid strong { font-family: "IBM Plex Mono"; }
+@media (max-width: 1080px) { .runwayForm { grid-template-columns: repeat(2, minmax(0, 1fr)); } .runwayForm button { width: fit-content; } }
+@media (max-width: 900px) { .weaponGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .formGrid, .metricGrid, .strategyGrid, .runwayForm, .weaponGrid { grid-template-columns: 1fr; } .full, .check { grid-column: auto; } .bossBanner > div { align-items: stretch; flex-direction: column; } }

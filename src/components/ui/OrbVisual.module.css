@@ -1,0 +1,17 @@
+.visual { flex: none; display: grid; place-items: center; position: relative; isolation: isolate; width: var(--orb-size); height: var(--orb-size); color: var(--orb-color); }
+.core { position: relative; z-index: 1; width: var(--orb-core-width); aspect-ratio: 1; border-radius: 50%; overflow: hidden; box-shadow: 0 6px 14px color-mix(in srgb, var(--orb-color) 10%, transparent); }
+.core canvas { display: block; }
+.instrument { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.outerRing { stroke: currentColor; stroke-width: .6; opacity: .25; }
+.innerRing { stroke: currentColor; stroke-width: .5; opacity: .16; }
+.ticks { stroke: currentColor; stroke-width: .65; opacity: .42; }
+.signalArc { stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; opacity: .68; }
+.node { fill: currentColor; stroke: var(--card); stroke-width: 1; }
+.orbitLine { stroke: currentColor; stroke-width: 1; opacity: .58; }
+.orbit .instrument { animation: orbit-turn 36s linear infinite; animation-play-state: paused; transform-origin: center; }
+.orbit[data-orb-moving="true"] .instrument { animation-play-state: running; }
+.orbit .core { z-index: 3; }
+.eclipse .core { transform: translate(-5%, 5%); }
+.occluder { position: absolute; z-index: 3; width: 64%; height: 64%; left: 39%; top: 10%; border-radius: 50%; background: var(--card); box-shadow: -2px 3px 6px color-mix(in srgb, var(--foreground) 7%, transparent); }
+@keyframes orbit-turn { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .orbit .instrument { animation: none; } }

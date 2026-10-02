@@ -1,0 +1,23 @@
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 16px; align-items: start; }
+.profileList { display: grid; gap: 6px; }
+.profileButton { width: 100%; display: flex; justify-content: space-between; gap: 10px; border: 1px solid transparent; border-radius: 7px; background: transparent; padding: 9px 10px; color: var(--muted-foreground); text-align: left; }
+.profileButton:hover { background: var(--muted); }
+.selected { background: color-mix(in srgb, var(--primary) 12%, var(--card)); border-color: var(--primary); color: var(--foreground); }
+.perkGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.perk { display: grid; grid-template-columns: minmax(0, 1fr) 94px; gap: 16px; align-items: start; min-width: 0; padding: 14px; border: 1px solid color-mix(in srgb, var(--border) 38%, transparent); border-radius: 8px; background: var(--card-strong); }
+.perkCopy { min-width: 0; }
+.perkHeader { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; min-width: 0; }
+.perkIcon { flex: 0 0 auto; font-size: .9rem; line-height: 1; }
+.perkName { margin: 0; font-size: .86rem; font-weight: 700; line-height: 1.25; text-wrap: balance; }
+.perkDescription { margin: 7px 0 0; color: var(--muted-foreground); font-size: .75rem; line-height: 1.45; text-wrap: pretty; }
+.perkEffect { display: flex; flex-wrap: wrap; gap: 4px 7px; align-items: baseline; margin: 8px 0 0; font-size: .68rem; line-height: 1.4; }
+.perkEffect span { color: var(--muted-foreground); font-size: .62rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.perkEffect strong { color: var(--primary); font-family: "IBM Plex Mono", monospace; font-weight: 500; overflow-wrap: anywhere; }
+.levelField { display: grid; gap: 5px; align-content: start; min-width: 0; }
+.levelLabel { color: var(--muted-foreground); font-size: .62rem; font-weight: 700; letter-spacing: .06em; line-height: 1; text-transform: uppercase; }
+.levelMaximum { color: var(--muted-foreground); font: .62rem/1.2 "IBM Plex Mono", monospace; text-align: right; }
+.relevant { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 6%, var(--card)); }
+.profileActions { display: flex; gap: 8px; margin-top: 12px; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+@media (max-width: 660px) { .perkGrid { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .perk { grid-template-columns: minmax(0, 1fr) 82px; gap: 10px; padding: 12px; } }

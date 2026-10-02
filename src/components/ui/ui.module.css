@@ -1,0 +1,39 @@
+.button { min-height: 36px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; border: 1px solid var(--border); border-radius: 7px; padding: 7px 12px; background: var(--card); color: var(--foreground); font-size: .875rem; font-weight: 600; transition: background-color 140ms ease, transform 140ms ease; }
+.button > svg { width: 16px; height: 16px; flex: none; }
+.button:hover { background: var(--muted); }
+.button:active { transform: translateY(1px); }
+.primary { background: var(--primary); border-color: var(--primary); color: var(--primary-foreground); }
+.primary:hover { background: color-mix(in srgb, var(--primary) 88%, var(--foreground)); }
+.danger { color: var(--negative); border-color: var(--negative); }
+.quiet { background: transparent; border-color: transparent; }
+.small { min-height: 30px; padding: 4px 9px; font-size: .8rem; }
+.small > svg { width: 14px; height: 14px; }
+.iconOnly { width: 36px; padding: 0; }
+.card { background: var(--card); border: 1px solid color-mix(in srgb, var(--border) 38%, transparent); border-radius: var(--radius);  }
+.cardHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 15px 17px 11px; border-bottom: 1px solid color-mix(in srgb, var(--border) 38%, transparent); }
+.cardTitle { margin: 0; font-size: .9rem; font-weight: 650; }
+.cardDescription { margin: 3px 0 0; color: var(--muted-foreground); font-size: .78rem; }
+.cardBody { padding: 16px 17px; }
+.badge { display: inline-flex; align-items: center; gap: 5px; min-height: 24px; padding: 2px 7px; border: 1px solid color-mix(in srgb, var(--border) 55%, transparent); border-radius: 999px; background: var(--muted); color: var(--muted-foreground); font-size: .72rem; font-weight: 600; white-space: nowrap; }
+.badge > svg { width: 12px; height: 12px; flex: none; }
+.badgePositive { color: var(--positive); background: color-mix(in srgb, var(--positive) 10%, var(--card)); border-color: var(--positive); }
+.badgeNegative { color: var(--negative); background: color-mix(in srgb, var(--negative) 9%, var(--card)); border-color: var(--negative); }
+.badgeWarning { color: var(--warning); background: color-mix(in srgb, var(--warning) 10%, var(--card)); border-color: var(--warning); }
+.field { display: grid; gap: 6px; }
+.label { color: var(--muted-foreground); font-size: .76rem; font-weight: 600; }
+.input, .select, .textarea { width: 100%; min-height: 38px; border: 1px solid var(--border); border-radius: 7px; background: var(--card-strong); padding: 7px 10px; font-size: .875rem; }
+.textarea { min-height: 90px; resize: vertical; }
+.help { color: var(--muted-foreground); font-size: .74rem; }
+.tableWrap { width: 100%; overflow: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+.table th { position: sticky; top: 0; z-index: 1; padding: 9px 10px; background: var(--muted); color: var(--muted-foreground); text-align: left; font-size: .7rem; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.table td { padding: 9px 10px; border-top: 1px solid color-mix(in srgb, var(--border) 32%, transparent); vertical-align: middle; }
+.table tbody tr:hover { background: color-mix(in srgb, var(--primary) 5%, var(--card)); }
+.number { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.empty { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; min-height: 150px; padding: 24px; color: var(--muted-foreground); text-align: center; font-size: .83rem; line-height: 1.55; }
+.empty::before { content: ""; display: block; width: 34px; height: 34px; flex: none; border-radius: 50%; background: radial-gradient(circle at 32% 20%, var(--card-strong) 5%, color-mix(in srgb, var(--primary) 18%, var(--card)) 45%, var(--primary)); box-shadow: 0 3px 8px color-mix(in srgb, var(--primary) 10%, transparent); }
+.error { padding: 10px 12px; border: 1px solid var(--negative); border-radius: 7px; background: color-mix(in srgb, var(--negative) 8%, var(--card)); color: var(--negative); font-size: .8rem; }
+.notice { padding: 10px 12px; border: 1px solid var(--warning); border-radius: 7px; background: color-mix(in srgb, var(--warning) 8%, var(--card)); color: var(--foreground); font-size: .8rem; }
+.skeleton { background: linear-gradient(90deg, var(--muted), var(--card), var(--muted)); background-size: 200% 100%; animation: skeleton 1.2s linear infinite; border-radius: 6px; }
+@keyframes skeleton { to { background-position: -200% 0; } }
+@media (max-width: 620px) { .input, .select, .textarea { font-size: 1rem; } }

@@ -1,0 +1,419 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\camar\\Documents\\Coding\\ascendry\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "docs/audits/2026-10-03/playwright.baseline.config.ts"
+    ],
+    "configFile": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\docs\\audits\\2026-10-03\\playwright.baseline.config.ts",
+    "rootDir": "C:/Users/camar/Documents/Coding/ascendry/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/camar/Documents/Coding/ascendry/docs/audits/2026-10-03/test-results/audit-baseline",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/camar/Documents/Coding/ascendry/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/audits/2026-10-03/browser-baseline.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "workspace.spec.ts",
+      "file": "workspace.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "loads the local catalog and navigates the main workspace",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1261,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T18:47:22.798Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-e45cdfb000258e1354fe",
+          "file": "workspace.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "keeps interface icons within the compact size scale on every route",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1528,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T18:47:25.472Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-710b010f37f71c35b845",
+          "file": "workspace.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "appearance and Prestige pages expose the complete controls",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5951,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Supply Depot pricing/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/Supply Depot pricing/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Supply Depot pricing/)\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Supply Depot pricing/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/Supply Depot pricing/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Supply Depot pricing/)\u001b[22m\n\n    at C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts:43:167",
+                    "location": {
+                      "file": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts",
+                      "column": 167,
+                      "line": 43
+                    },
+                    "snippet": "  41 |   await page.goto(\"/prestige\"); await expect(page.getByText(\"Pyrology\")).toBeVisible(); await expect(page.getByText(\"Quartermaster\")).toBeVisible();\n  42 |   await page.getByLabel(\"Insider level\").fill(\"45\"); await page.getByRole(\"button\", { name: \"Save profile\" }).click(); await expect(page.getByText(\"Profile saved locally.\")).toBeVisible();\n> 43 |   await page.goto(\"/settings\"); await expect(page.getByRole(\"option\", { name: \"Ground Plane\" })).toBeAttached(); await expect(page.getByText(/Supply Depot pricing/)).toBeVisible();\n     |                                                                                                                                                                       ^\n  44 |   await page.getByLabel(\"Display mode\").selectOption(\"dark\"); await expect(page.locator(\"html\")).toHaveAttribute(\"data-mode\", \"dark\");\n  45 | });\n  46 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts",
+                        "column": 167,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Supply Depot pricing/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/Supply Depot pricing/) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Supply Depot pricing/)\u001b[22m\n\n\n  41 |   await page.goto(\"/prestige\"); await expect(page.getByText(\"Pyrology\")).toBeVisible(); await expect(page.getByText(\"Quartermaster\")).toBeVisible();\n  42 |   await page.getByLabel(\"Insider level\").fill(\"45\"); await page.getByRole(\"button\", { name: \"Save profile\" }).click(); await expect(page.getByText(\"Profile saved locally.\")).toBeVisible();\n> 43 |   await page.goto(\"/settings\"); await expect(page.getByRole(\"option\", { name: \"Ground Plane\" })).toBeAttached(); await expect(page.getByText(/Supply Depot pricing/)).toBeVisible();\n     |                                                                                                                                                                       ^\n  44 |   await page.getByLabel(\"Display mode\").selectOption(\"dark\"); await expect(page.locator(\"html\")).toHaveAttribute(\"data-mode\", \"dark\");\n  45 | });\n  46 |\n    at C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts:43:167"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T18:47:27.017Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\docs\\audits\\2026-10-03\\test-results\\audit-baseline\\workspace-appearance-and-P-82556-xpose-the-complete-controls-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts",
+                    "column": 167,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-283ea752a56aa5764db1",
+          "file": "workspace.spec.ts",
+          "line": 40,
+          "column": 1
+        },
+        {
+          "title": "calculates all recipe modes, applies overrides, and saves a reproducible plan",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6039,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Selected total')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Selected total') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Selected total')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Selected total')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Selected total') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Selected total')\u001b[22m\n\n    at C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts:57:50",
+                    "location": {
+                      "file": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts",
+                      "column": 50,
+                      "line": 57
+                    },
+                    "snippet": "  55 |   for (const input of await page.getByLabel(/Manual price for/).all()) await input.fill(\"10\");\n  56 |   await page.getByRole(\"button\", { name: \"Calculate plan\" }).click();\n> 57 |   await expect(page.getByText(\"Selected total\")).toBeVisible();\n     |                                                  ^\n  58 |   await page.getByRole(\"button\", { name: \"Craft all\" }).click(); await page.getByRole(\"button\", { name: \"Calculate plan\" }).click(); await expect(page.getByText(/recursive path/)).toBeVisible();\n  59 |   await page.getByRole(\"button\", { name: \"Lowest cost\" }).click(); await page.getByRole(\"button\", { name: \"Find lowest cost\" }).click(); await expect(page.getByText(/optimized path/)).toBeVisible();\n  60 |   await page.getByLabel(\"Plan name\").fill(\"E2E Bricks Plan\"); await page.getByRole(\"button\", { name: \"Save plan\" }).click(); await expect(page.getByRole(\"button\", { name: \"Saved\" })).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts",
+                        "column": 50,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Selected total')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Selected total') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Selected total')\u001b[22m\n\n\n  55 |   for (const input of await page.getByLabel(/Manual price for/).all()) await input.fill(\"10\");\n  56 |   await page.getByRole(\"button\", { name: \"Calculate plan\" }).click();\n> 57 |   await expect(page.getByText(\"Selected total\")).toBeVisible();\n     |                                                  ^\n  58 |   await page.getByRole(\"button\", { name: \"Craft all\" }).click(); await page.getByRole(\"button\", { name: \"Calculate plan\" }).click(); await expect(page.getByText(/recursive path/)).toBeVisible();\n  59 |   await page.getByRole(\"button\", { name: \"Lowest cost\" }).click(); await page.getByRole(\"button\", { name: \"Find lowest cost\" }).click(); await expect(page.getByText(/optimized path/)).toBeVisible();\n  60 |   await page.getByLabel(\"Plan name\").fill(\"E2E Bricks Plan\"); await page.getByRole(\"button\", { name: \"Save plan\" }).click(); await expect(page.getByRole(\"button\", { name: \"Saved\" })).toBeVisible();\n    at C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts:57:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T18:47:33.675Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\docs\\audits\\2026-10-03\\test-results\\audit-baseline\\workspace-calculates-all-r-c90c9-d-saves-a-reproducible-plan-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\camar\\Documents\\Coding\\ascendry\\e2e\\workspace.spec.ts",
+                    "column": 50,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-e17f168e8be7c69b1d27",
+          "file": "workspace.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "builds from an exact budget and supports the primary keyboard shortcuts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1322,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T18:47:40.680Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-c935fdc3195d062e1b92",
+          "file": "workspace.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "creates an alert and exposes it in the dashboard watchlist",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 676,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T18:47:42.321Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-37fd9161673ae8fb383e",
+          "file": "workspace.spec.ts",
+          "line": 99,
+          "column": 1
+        },
+        {
+          "title": "calculates boss damage and ascension without a live API connection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 943,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T18:47:43.017Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-887bab57e525aba6cb00",
+          "file": "workspace.spec.ts",
+          "line": 105,
+          "column": 1
+        },
+        {
+          "title": "keeps the active mobile destination visible without page overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 911,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T18:47:43.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-7e1add302e095f34d585",
+          "file": "workspace.spec.ts",
+          "line": 125,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-02T18:47:22.144Z",
+    "duration": 22849.938,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

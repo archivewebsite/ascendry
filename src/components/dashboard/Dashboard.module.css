@@ -1,0 +1,26 @@
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: center; gap: 30px; padding: 28px 30px; margin-bottom: 18px; background: var(--card); border: 1px solid color-mix(in srgb, var(--border) 32%, transparent); border-radius: 14px; }
+.introduction { min-width: 0; }
+.title { margin: 0; font-size: clamp(1.9rem, 3.6vw, 3.1rem); font-weight: 600; line-height: 1.08; letter-spacing: -.035em; text-wrap: balance; }
+.description { max-width: 59ch; margin: 16px 0 0; color: var(--muted-foreground); font-size: .92rem; line-height: 1.7; }
+.actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.actions svg { width: 16px; height: 16px; }
+.instrument { display: flex; flex-direction: column; align-items: center; gap: 9px; margin: 0; }
+.instrumentCaption { display: flex; align-items: center; gap: 7px; color: var(--muted-foreground); font-size: .72rem; }
+.signal { width: 6px; height: 6px; border-radius: 50%; background: var(--warning); }
+.signalReady { background: var(--positive); }
+.metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid color-mix(in srgb, var(--border) 32%, transparent); border-radius: 12px; background: var(--card); overflow: hidden; }
+.metric { min-width: 0; padding: 19px 22px; }
+.metric + .metric { border-left: 1px solid color-mix(in srgb, var(--border) 24%, transparent); }
+.metricLabel { font-size: .72rem; color: var(--muted-foreground); font-weight: 550; }
+.metricValue { margin-top: 8px; font: 500 1.5rem "IBM Plex Mono", monospace; letter-spacing: -.04em; overflow-wrap: anywhere; }
+.metricMeta { margin-top: 7px; font-size: .72rem; color: var(--muted-foreground); }
+.launches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+.launch { display: flex; align-items: center; gap: 11px; min-height: 62px; padding: 13px 15px; background: var(--card); border: 1px solid color-mix(in srgb, var(--border) 28%, transparent); border-radius: 10px; transition: border-color 150ms ease, background-color 150ms ease; }
+.launch:hover { background: color-mix(in srgb, var(--primary) 3%, var(--card)); border-color: var(--primary); }
+.launch > svg:first-child { width: 21px; height: 21px; flex: none; color: var(--primary); }
+.launch > svg:last-child { width: 14px; height: 14px; flex: none; margin-left: auto; color: var(--muted-foreground); }
+.launch span { min-width: 0; }
+.launch strong { display: block; font-size: .79rem; font-weight: 600; }
+.launch small { display: block; margin-top: 3px; color: var(--muted-foreground); font-size: .69rem; }
+@media (max-width: 1100px) { .hero { grid-template-columns: minmax(0, 1fr) 195px; padding: 23px; gap: 20px; } .launches { grid-template-columns: repeat(2, minmax(0, 1fr)); } .metric { padding: 16px; } }
+@media (max-width: 680px) { .hero { grid-template-columns: minmax(0, 1fr) 106px; padding: 20px 17px; gap: 12px; } .introduction { display: contents; } .title { grid-column: 1; grid-row: 1; font-size: 1.65rem; align-self: end; } .description { grid-column: 1; grid-row: 2; margin: 0; font-size: .8rem; line-height: 1.65; } .instrument { grid-column: 2; grid-row: 1 / 3; gap: 6px; } .instrument .orb { width: 100px; height: 100px; } .instrumentCaption { font-size: .64rem; text-align: center; line-height: 1.4; max-width: 100px; } .signal { flex: none; } .actions { grid-column: 1 / -1; grid-row: 3; margin-top: 6px; } .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .metric:nth-child(3) { border-left: 0; } .metric:nth-child(n + 3) { border-top: 1px solid color-mix(in srgb, var(--border) 24%, transparent); } .launch { padding: 12px; gap: 8px; } .launch small { font-size: .68rem; } }

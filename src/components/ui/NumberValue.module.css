@@ -1,0 +1,8 @@
+.value, .trigger { color: inherit; font: inherit; font-variant-numeric: tabular-nums; white-space: normal; overflow-wrap: anywhere; }
+.trigger { appearance: none; max-width: 100%; min-height: 24px; padding: 0; border: 0; border-radius: 2px; background: transparent; text-align: inherit; text-decoration: underline dotted; text-underline-offset: .2em; cursor: help; }
+.trigger:hover { text-decoration-style: solid; }
+.trigger:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+.exact { z-index: 100; max-width: min(340px, calc(100vw - 24px)); padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--card-strong); color: var(--foreground); box-shadow: 0 4px 14px color-mix(in srgb, var(--foreground) 12%, transparent); }
+.caption { display: block; margin-bottom: 5px; color: var(--muted-foreground); font: .72rem "IBM Plex Sans", sans-serif; }
+.digits { display: block; font: 600 .9rem "IBM Plex Mono", monospace; overflow-wrap: anywhere; user-select: text; }
+.arrow { fill: var(--card-strong); }

@@ -1,0 +1,58 @@
+.searchBar { display: flex; align-items: end; gap: 10px; }
+.searchBar label { flex: 1; }
+.searchResults { display: grid; gap: 7px; margin-top: 12px; }
+.searchResults button { display: flex; justify-content: space-between; gap: 16px; width: 100%; border: 1px solid color-mix(in srgb, var(--border) 55%, transparent); border-radius: var(--radius); background: var(--muted); padding: 10px 12px; color: inherit; text-align: left; }
+.searchResults button:hover { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 7%, var(--muted)); }
+.searchResults button span:first-child { font-weight: 650; }
+.searchResults button span:last-child { color: var(--muted-foreground); font: .72rem "IBM Plex Mono"; }
+.emptyState { min-height: 250px; place-items: center; align-content: center; text-align: center; }
+.emptyState > svg { width: 34px; height: 34px; color: var(--primary); }
+.emptyState h2 { margin: 7px 0 0; font-size: 1.05rem; }
+.emptyState p { max-width: 600px; margin: 4px 0; color: var(--muted-foreground); font-size: .82rem; }
+.muted { color: var(--muted-foreground); font-size: .8rem; }
+.hero { overflow: hidden; background: linear-gradient(120deg, color-mix(in srgb, var(--primary) 10%, var(--card)), var(--card) 58%); }
+.heroTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
+.hero h2 { margin: 2px 0; font-size: 1.55rem; letter-spacing: -.035em; }
+.hero p { margin: 0; color: var(--muted-foreground); font-size: .77rem; }
+.eyebrow { color: var(--primary); font: 650 .68rem "IBM Plex Mono"; text-transform: uppercase; letter-spacing: .08em; }
+.heroMetrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; margin-top: 18px; }
+.heroMetrics div { border: 1px solid color-mix(in srgb, var(--border) 40%, transparent); border-radius: var(--radius); background: color-mix(in srgb, var(--background) 55%, transparent); padding: 10px 12px; }
+.heroMetrics span { display: block; color: var(--muted-foreground); font-size: .68rem; }
+.heroMetrics strong { display: block; margin-top: 4px; font: 650 .88rem "IBM Plex Mono"; }
+.actionLink { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); padding: 7px 9px; color: var(--foreground); font-size: .76rem; text-decoration: none; }
+.actionLink:hover { border-color: var(--primary); }
+.actionLink svg { width: 14px; height: 14px; }
+.tabs { display: flex; gap: 3px; overflow-x: auto; border-bottom: 1px solid var(--border); padding: 0 3px; }
+.tabs button { flex: none; border: 0; border-bottom: 2px solid transparent; background: transparent; padding: 9px 11px; color: var(--muted-foreground); font: 600 .75rem inherit; }
+.tabs button:hover { color: var(--foreground); background: color-mix(in srgb, var(--primary) 6%, transparent); }
+.tabs button[aria-pressed="true"] { border-bottom-color: var(--primary); color: var(--foreground); }
+.definitionGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; margin: 0; }
+.definitionGrid > div { padding: 9px 0; border-bottom: 1px solid color-mix(in srgb, var(--border) 30%, transparent); }
+.definitionGrid dt, .objectCard dt { color: var(--muted-foreground); font-size: .68rem; }
+.definitionGrid dd { margin: 3px 0 0; overflow-wrap: anywhere; font: 600 .78rem "IBM Plex Mono"; }
+.raw { margin-top: 14px; border-top: 1px solid color-mix(in srgb, var(--border) 40%, transparent); padding-top: 10px; }
+.raw summary { cursor: pointer; color: var(--muted-foreground); font-size: .73rem; font-weight: 600; }
+.raw pre { max-height: 520px; overflow: auto; border-radius: var(--radius); background: var(--background); padding: 12px; font: .7rem/1.55 "IBM Plex Mono"; white-space: pre-wrap; overflow-wrap: anywhere; }
+.objectGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.objectCard { min-width: 0; border: 1px solid color-mix(in srgb, var(--border) 48%, transparent); border-radius: var(--radius); background: var(--muted); padding: 12px; }
+.objectCard h3 { margin: 0 0 8px; font-size: .85rem; }
+.objectCard dl { margin: 0; }
+.objectCard dl > div { display: grid; grid-template-columns: minmax(100px, .55fr) minmax(0, 1fr); gap: 8px; padding: 4px 0; }
+.objectCard dd { margin: 0; overflow: hidden; text-overflow: ellipsis; color: var(--foreground); font: .7rem "IBM Plex Mono"; white-space: nowrap; }
+.inventoryGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.inventoryGrid article { content-visibility: auto; contain-intrinsic-size: 42px; display: flex; align-items: center; gap: 9px; min-width: 0; border: 1px solid color-mix(in srgb, var(--border) 45%, transparent); border-radius: var(--radius); padding: 9px 10px; }
+.itemEmoji { flex: none; font-size: 1.2rem; }
+.inventoryGrid article div { min-width: 0; }
+.inventoryGrid strong, .inventoryGrid article div span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.inventoryGrid strong { font-size: .76rem; }
+.inventoryGrid article div span { margin-top: 2px; color: var(--muted-foreground); font: .7rem "IBM Plex Mono"; }
+.warning { display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--warning); border-radius: var(--radius); background: color-mix(in srgb, var(--warning) 9%, var(--card)); padding: 11px 12px; }
+.warning svg { width: 21px; height: 21px; flex: none; color: var(--warning); }
+.warning strong { font-size: .8rem; }
+.warning p { margin: 3px 0 0; color: var(--muted-foreground); font-size: .73rem; }
+.internalFields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 14px; margin-top: 14px; }
+.internalFields > div { display: grid; grid-template-columns: minmax(110px, .6fr) minmax(0, 1fr); gap: 8px; border-bottom: 1px solid color-mix(in srgb, var(--border) 30%, transparent); padding: 7px 0; }
+.internalFields span { color: var(--muted-foreground); font-size: .69rem; overflow-wrap: anywhere; }
+.internalFields code { overflow: hidden; text-overflow: ellipsis; font-size: .68rem; white-space: nowrap; }
+@media (max-width: 900px) { .heroMetrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .inventoryGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 650px) { .searchBar, .heroTop { align-items: stretch; flex-direction: column; } .searchResults button { flex-direction: column; gap: 3px; } .heroMetrics, .definitionGrid, .objectGrid, .inventoryGrid, .internalFields { grid-template-columns: 1fr; } }

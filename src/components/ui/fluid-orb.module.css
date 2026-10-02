@@ -1,0 +1,10 @@
+.orb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
